@@ -66,11 +66,8 @@ criminal_roles = ("Enforcer", "Mastermind", "Getaway Driver", "Hacker", "Thief",
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'rya@q2_jzrx&5w1j0hno@ci*rqwfsud!f3ogeoasn4i_nr5ox^'
-
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
