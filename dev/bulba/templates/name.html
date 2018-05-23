@@ -1,0 +1,23 @@
+<html>
+<head>
+        {% load staticfiles %}
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
+<body style="background-image:url({% static 'hex_background.png' %})">
+<div style="color:#550055">
+  <h1>Your name is:</h1>
+<h2>{{ diyNameQuestion }}</h2>
+<h2>{{ first_name }} {{ last_name }}</h2>
+<br>
+<a class="btn btn-info" href={% url "final" %}>Bearacter Sheet</a>
+<br>
+<br>
+<br>
+<br>
+</div>
+    <a href= {% url "index" %} class="btn btn-info">
+        <span class="glyphicon glyphicon-home"></span> Home
+    </a>
+</body>
+</html>

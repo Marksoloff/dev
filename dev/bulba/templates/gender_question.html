@@ -1,0 +1,35 @@
+<html>
+<head>
+    {% load staticfiles %}
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
+<body style="background-image:url({% static 'hex_background.png' %})">
+<div style="color:#550055">
+
+        <h2>Hey, I been wonderin' - does your bear have a gender?</h2>
+</div>
+    <br>
+        <form action={% url "name" %} method="POST"> {% csrf_token %}
+            <input type="submit" value="It's a boy!" name="boy_name" class="btn btn-info">
+        </form>
+<br>
+        <form action={% url "name" %} method="POST"> {% csrf_token %}
+            <input type="submit" value="It's a girl!" name="girl_name" class="btn btn-info">
+        </form>
+<br>
+        <form action={% url "name" %} method="POST"> {% csrf_token %}
+            <input type="submit" value="Gender is a social construct from which I defiantly abstain!" name="ungen_name"
+            class="btn btn-info">
+        </form>
+<br>
+        <form action={% url "diy_page" %} method="POST"> {% csrf_token %}
+            <input type="submit" value="I'll think up my own damned name, pal!" name="diy_name"
+            class="btn btn-info">
+        </form>
+<br>
+    <a href= {% url "index" %} class="btn btn-info">
+        <span class="glyphicon glyphicon-home"></span> Home
+    </a>
+</body>
+</html>

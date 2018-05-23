@@ -1,0 +1,32 @@
+<html>
+<head>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}style.css"/>
+{% load staticfiles %}
+</head>
+<body style="background-image:url({% static 'hex_background.png' %})">
+<div style="color:#550055">
+    <h2>Badda-BOOM! Hey get a load of you, ya stinkin':</h2>
+  <h2><ul>
+      <li>{{personality_stat}}</li>
+      <li>{{bear_types_stat}}</li>
+      <li>{{criminal_roles_stat}}</li>
+  </ul></h2>
+<br>
+<h2> {{postStat}}</h2>
+</div>
+
+    <a class="btn btn-info" href={% url "stats" %}>Re-roll</a>
+<br>
+<br>
+<a class="btn btn-info" href={% url "gender_question" %}>Make a name for yerself!</a>
+<br>
+<br>
+<br>
+    <a href= {% url "index" %} class="btn btn-info">
+        <span class="glyphicon glyphicon-home"></span> Home
+    </a>
+</body>
+
+</html>

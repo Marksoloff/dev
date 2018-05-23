@@ -1,0 +1,46 @@
+<html>
+<head>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+{% csrf_token %}
+{% load staticfiles %}
+</head>
+<body style="background-image:url({% static 'hex_background.png' %})">
+<div style="color:#550055">
+
+<div class="bg"></div>
+<h1 class="py-5 text-center">Well look at you, ya:</h1>
+<div>
+<h2 class="py-5 text-center">{{personality_stat}}</h2>
+<h2 class="py-5 text-center">{{bear_types_stat}}</h2>
+<h2 class="py-5 text-center">{{criminal_roles_stat}}</h2>
+</div>
+</div>
+<br>
+<h1 class="py-5 text-center">Known far and wide as:</h1>
+<h2 class="py-5 text-center">{{ first_name }} {{ last_name }} {{ full_name }}</h2>
+
+    {% if bear_types_stat  == "Panda" %}
+      <img class="center-block" src="{% static 'panda.jpg' %}" alt="Panda"/>
+    {% endif %}
+    {% if bear_types_stat == "Grizzly Bear" %}
+      <img class="center-block" src="{% static 'gb.jpg' %}" alt="Grizzly"/>
+    {% endif %}
+    {% if bear_types_stat == "Polar Bear" %}
+      <img class="center-block" src="{% static 'pb.jpg' %}" alt="Polar Bear"/>
+    {% endif %}
+     {% if bear_types_stat == "Black Bear" %}
+      <img class="center-block" src="{% static 'bb.jpg' %}" alt="Black Bear"/>
+    {% endif %}
+    {% if bear_types_stat == "Sun Bear" %}
+      <img class="center-block" src="{% static 'sb.jpg' %}" alt="Sun Bear"/>
+    {% endif %}
+    {% if bear_types_stat == "Honey Badger" %}
+      <img class="center-block" src="{% static 'hb.jpeg' %}" alt="Honey Badger"/>
+    {% endif %}
+
+  <br>
+    <a href= {% url "index" %} class="btn btn-info">
+        <span class="glyphicon glyphicon-home"></span> Home
+    </a></body>
+</html>

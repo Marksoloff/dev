@@ -1,0 +1,25 @@
+<html>
+<head>
+</head>
+<body>
+<h1> MY_TEMPLATE (diy_page clone) </h1>
+<h2>{{diyNameQuestion}}</h2>
+  <div class="container">
+<h2>Write your name in the space provided.</h2>
+<br>
+<h3>(No cheating)</h3>
+      <h1><strong>Demo Form</strong></h1>
+
+<form action="{% url 'final' %}" method="post">
+        {% csrf_token %}
+    <label for="first_name">first name: </label>
+    <input id="first_name" type="text" name="first_name" value="{{ first_name }}">
+    <label for="last_name">last name: </label>
+    <input id="last_name" type="text" name="last_name" value="{{ last_name }}">
+    <input type="submit" value="OK">
+</form>
+  </div>
+<br>
+<button><a href= {% url "index" %}>Home</a></button>
+</body>
+</html>

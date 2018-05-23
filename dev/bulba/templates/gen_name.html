@@ -1,0 +1,20 @@
+<html>
+<head>
+        {% load staticfiles %}
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
+<body style="background-image:url({% static 'ba.jpg' %})">
+<h1> NAME GENERATOR </h1>
+<h2>And your bear name is:</h2>
+<h2>{{U_full_name}}</h2>
+<br>
+<a class="btn btn-info" href={% url "final" %}>Final Stats Page</a>
+<br>
+<br>
+<a class="btn btn-info" href={% url "stats" %}>Re-roll your stats?</a>
+<br>
+<h2>{{final_stats}}</h2>
+<a class="btn btn-info" href={% url "index" %}>Home</a>
+</body>
+</html>
